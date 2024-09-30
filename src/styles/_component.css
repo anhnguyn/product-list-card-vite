@@ -1,0 +1,32 @@
+.add-cart {
+    cursor: pointer;
+    left: 50%;
+    background: white;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    border: 1px solid black;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+   .add-cart {
+        position: relative;
+        top: -27px;
+   }
+}
+
+@media (min-width: 768px) {
+    .thumbnail {
+        position: relative;
+        margin-bottom: 40px;
+    }
+    
+    .add-cart {
+        bottom: -16px;
+        position: absolute;
+        width: max-content;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,3 @@
+*:not(dialog) {
+    margin: 0;
+}
