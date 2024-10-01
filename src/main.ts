@@ -27,7 +27,13 @@ const addedItems: dessertItem[] = [];
 const selected = document.createElement('div');
 selected.setAttribute('id', 'selected-container');
 
-const renderDessertItems = () => {
+const addToCardBtns = document.getElementsByClassName('add-cart');
+
+if (addToCardBtns) {
+
+addToCardBtns.forEach(btn => btn.addEventListener('click', (event) => alert(event.target)));
+}
+const renderStaticDessertCard = () => {
     const desserts = document.querySelector('#desserts')
 
     if (desserts) {
@@ -80,7 +86,6 @@ const renderDessertItems = () => {
             dessertItem.appendChild(itemName);
             dessertItem.appendChild(itemPrice);
 
-            addToCartBtn.addEventListener('click', () => addToCart(dessert));
             desserts.appendChild(dessertItem);
       })
     }
@@ -177,6 +182,6 @@ function renderSelectedItem(item: dessertItem) {
 }
 
 window.onload = () => {
-    renderDessertItems();
+    renderStaticDessertCard();
     renderCart();
 }
